@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelPlanner - Интерактивное планирование</title>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" defer></script>
+  <script type="module" crossorigin src="/assets/index-BzbGdJ0W.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DbjHDk3u.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>🌍 Travel Planner</h1>
+            <p>Спланируйте ваше идеальное путешествие</p>
+        </header>
+
+        <main>
+            <section class="plan-section">
+                <h2>Планировщик путешествия</h2>
+                <div id="plan-list"></div>
+                <button id="clear-plan" class="secondary-btn">Очистить всё</button>
+            </section>
+
+            <div class="layout">
+                <section class="attractions-section">
+                    <div class="section-header">
+                        <h2 id="city-title">Достопримечательности</h2>
+                        <p id="city-description">Картинки достопримечательностей последнего добавленного места.</p>
+                    </div>
+                    <div id="attractions" class="attractions-grid">
+                        <div class="attraction-card placeholder-card">Добавьте место в планировщик, чтобы увидеть картинки.</div>
+                    </div>
+                </section>
+
+                <section class="map-section">
+                    <div class="section-header">
+                        <h2>Карта — кликните для добавления места</h2>
+                        <p id="map-instruction">Кликните по карте, чтобы добавить место в планировщик.</p>
+                    </div>
+                    <div class="map-search-row">
+                        <input type="text" id="address-input" placeholder="Искать адрес, район или место...">
+                        <button id="address-search-btn">Добавить по адресу</button>
+                    </div>
+                    <div id="map"></div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
